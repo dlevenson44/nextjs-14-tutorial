@@ -40,3 +40,12 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 1. How you want the user to experience the page as it streams.
 2. What content you want to prioritize.
 3. If the components rely on data fetching.
+
+##### Partial Pre-Rendering (aka PPR)
+- allows you to render a route statically while keeping some parts dynamic
+- when user visits route static route shell is served to make initial load fast
+- shell leaves holes where dynamic content will load in async
+- async holes is loaded in parallel, reducing overall page load time
+- PPR uses React's Concurent APIs, and uses Suspense to defer rendering parts of your app until condition is met
+- Fallback is embedded into intitial static file along with other static content
+- at build time static parts are prerendered while rest is postponed
