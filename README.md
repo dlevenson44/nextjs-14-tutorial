@@ -49,3 +49,9 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 - PPR uses React's Concurent APIs, and uses Suspense to defer rendering parts of your app until condition is met
 - Fallback is embedded into intitial static file along with other static content
 - at build time static parts are prerendered while rest is postponed
+
+##### Search Params, usePathname, and useRouter
+- benefits to using url search params to manage search state:
+1. Bookmarkable and Shareable URLs: Since the search parameters are in the URL, users can bookmark the current state of the application, including their search queries and filters, for future reference or sharing.
+2. Server-Side Rendering and Initial Load: URL parameters can be directly consumed on the server to render the initial state, making it easier to handle server rendering.
+3. Analytics and Tracking: Having search queries and filters directly in the URL makes it easier to track user behavior without requiring additional client-side logic.
