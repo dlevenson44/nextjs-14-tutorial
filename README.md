@@ -93,3 +93,35 @@ if (!invoice) notFound();
 ##### Authentication
 - Authentication is about making sure the user is who they say they are. You're proving your identity with something you have like a username and password.
 - Authorization is the next step. Once a user's identity is confirmed, authorization decides what parts of the application they are allowed to use.
+
+##### Metadata
+- Title metadata: Responsible for the title of a webpage that is displayed on the browser tab. It's crucial for SEO as it helps search engines understand what the webpage is about.
+```
+<title>Page Title</title>
+```
+- Description Metadata: This metadata provides a brief overview of the webpage content and is often displayed in search engine results.
+```
+<meta name="description" content="A brief description of the page content." />
+```
+- Keyword Metadata: This metadata includes the keywords related to the webpage content, helping search engines index the page.
+```
+<meta name="keywords" content="keyword1, keyword2, keyword3" />
+```
+- Open Graph Metadata: This metadata enhances the way a webpage is represented when shared on social media platforms, providing information such as the title, description, and preview image.
+```
+<meta property="og:title" content="Title Here" />
+<meta property="og:description" content="Description Here" />
+<meta property="og:image" content="image_url_here" />
+```
+- Favicon Metadata: This metadata links the favicon (a small icon) to the webpage, displayed in the browser's address bar or tab.
+```
+<link rel="icon" href="path/to/favicon.ico" />
+```
+- can add metadata via config using `metadata` object or `generateMetadata` helper in a layout or page file
+- can also use file-based metadata, as Nextjs has special files
+1. `favicon.ico`, `apple-icon.jpg`, and `icon.jpg`: Utilized for favicons and icons
+2. `opengraph-image.jpg` and `twitter-image.jpg`: Employed for social media images
+3. `robots.txt`: Provides instructions for search engine crawling
+4. `sitemap.xml`: Offers information about the website's structure
+- can move images from `/public` into root of `/app` and next.js automatically id and use these files as favicon and OG files, etc... can be verified in `<head>` element in dev tools
+- can adjust metadata for a page in each `page.tsx` file
