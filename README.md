@@ -79,3 +79,13 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 ```
 if (!invoice) notFound();
 ```
+
+##### Accessibility
+- `eslint-plugin-jsx-a11y` helps catch accessibility issues-- such as images without alt text, bad use of `role` or `aria-*`, and more
+- Semantic HTML: using semantic elements `input`, `option`, etc. instead of `div`-- allows assistive tech to focus on the input elements and provide proper contextual info to the user, making form easier to navigate and understand
+- Labeling: `label` and `htmlFor` attributes as examples, ensures that each form field has a descriptive text label to improve AT support
+- Focus Outline: fields are properly styled to show an outline when they are in focus acting as visual indicator
+- Benefits of server-side validation include:
+1. ensure data is in proper format before sending to DB
+2. reduce risk of malicious users bypassing client-side vlaidation
+3. have one source of truth for what is considered valid data
