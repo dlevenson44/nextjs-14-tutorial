@@ -55,3 +55,15 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 1. Bookmarkable and Shareable URLs: Since the search parameters are in the URL, users can bookmark the current state of the application, including their search queries and filters, for future reference or sharing.
 2. Server-Side Rendering and Initial Load: URL parameters can be directly consumed on the server to render the initial state, making it easier to handle server rendering.
 3. Analytics and Tracking: Having search queries and filters directly in the URL makes it easier to track user behavior without requiring additional client-side logic.
+
+##### Server Actions
+- React Server Actions let you run async code directly on the server, eliminating need to create API endpoints to mutate data
+- instead you write async functions that execute on the server and can be invoked from Client or Server components
+- Server Actions offer effective security solution protecting against different types of attacks, securing data, and ensuring authorized access
+- Server Actions achieve this through things like POST requests, encrypted closures, strict input checks, error message hashing, and host restrictions ALL working together
+- use `action` attribute in `form` elements to invoke actions
+- actions automatically receive native formData object with captured data
+- Advantage of calling Server Action in Server component is progressive enhancement-- forms work even if JavaScript is disabled on the client
+- Server Actions deeply integrated w NextJs caching
+- when form is submitted via server action, action can be used to mutate data... can also revalidated associated cache using APIs such as `revalidatePath` and `revalidateTag`
+- Server Actions create a `POST` API endpoint, so you don't need to manually create endpoints
