@@ -67,3 +67,15 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 - Server Actions deeply integrated w NextJs caching
 - when form is submitted via server action, action can be used to mutate data... can also revalidated associated cache using APIs such as `revalidatePath` and `revalidateTag`
 - Server Actions create a `POST` API endpoint, so you don't need to manually create endpoints
+
+##### Error Handling
+- `error.tsx` file acts as catch-all for unexpected errors and lets you display fallback UI-- kind of like `loading.tsx`
+- `error.tsx` must be a Client Component
+- accepts two props:  error and reset
+- `error` prop is object of [Javascript's native error object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)
+- `reset` prop is function to reset error boundary-- when executed, function will try to rerender the route
+- `not-found.tsx` is another file that acts for-- you guessed it-- routes that cannot be found
+- to call above, import `noteFound` from `next/navigation` to handle instances when a page is not found, can be used like below example:
+```
+if (!invoice) notFound();
+```
