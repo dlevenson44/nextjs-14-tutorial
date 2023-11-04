@@ -89,3 +89,7 @@ if (!invoice) notFound();
 1. ensure data is in proper format before sending to DB
 2. reduce risk of malicious users bypassing client-side vlaidation
 3. have one source of truth for what is considered valid data
+
+##### Authentication
+- Authentication is about making sure the user is who they say they are. You're proving your identity with something you have like a username and password.
+- Authorization is the next step. Once a user's identity is confirmed, authorization decides what parts of the application they are allowed to use.
