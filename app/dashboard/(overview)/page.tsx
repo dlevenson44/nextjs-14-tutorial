@@ -6,6 +6,11 @@ import { RevenueChartSkeleton, LatestInvoicesSkeleton, CardsSkeleton } from '@/a
 import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
 import { lusitana } from '@/app/ui/fonts';
 import { fetchCardData } from '@/app/lib/data'
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+  title: 'Invoices | Acme Dashboard',
+};
  
 export default async function Page() {
   // chain awaits here can create waterfall effect
